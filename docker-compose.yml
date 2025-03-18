@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  spark_service:
+    build: .
+    container_name: spark_service
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash -c "python3 doris_to_trino.py"
