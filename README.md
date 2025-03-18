@@ -1,4 +1,17 @@
 # Doris To Trino Data Pipeline Spark
 
-Demonstrating how to use a Spark data pipeline to import Doris data into Iceberg created in Trino.  
-It's not an ideal approach, but since Doris cannot set the S3 region (refer to [Github [Bug] S3 properties not work wher create iceberg catalog](https://github.com/apache/doris/issues/23671)), it serves as a temporary solution.
+Data pipeline written by Spark to transfer Doris to Trino.  
+It is not recommended to use a data pipeline for data migration. Instead, you can directly set up an external catalog in Doris to connect to Iceberg. This is just an exceptional example.
+
+## Overview
+
+- Language: Python
+- Data Processing Framework: Spark v3.5.1
+
+
+## Run
+
+```
+docker compose up -d
+```
+
